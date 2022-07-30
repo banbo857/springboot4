@@ -1,0 +1,37 @@
+spring:
+  application:
+    name: springboot4
+  #mysql
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    name: defaultDataSource
+    url: jdbc:mysql://localhost:3306/db1?serverTimezone=UTC
+    username: root
+    password: 123
+  rsocket:
+    server:
+      port: 8080
+
+  #redis
+  redis:
+    host: 127.0.0.1
+    port: 6379
+    password:
+    jedis:
+      pool:
+        max-active: 8
+        max-idle: 8
+        max-wait:  -1
+        min-idle: 0
+    timeout: 30000
+  #rabbitmq
+  rabbitmq:
+    host: 127.0.0.1
+    port: 5672
+    username: guest
+    password: guest
+
+mybatis-plus:
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+
