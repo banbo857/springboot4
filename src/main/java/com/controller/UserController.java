@@ -5,14 +5,21 @@ import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.dao.UserDao;
 import com.entity.User;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
+@CrossOrigin
 public class UserController {
 
     @Autowired
     UserDao userDao;
+
+    @RequestMapping("/test")
+    public String test(){
+        return "test";
+    }
 
     @RequestMapping("/getById")
     public User getUserInfo(Integer userId) {
@@ -23,7 +30,7 @@ public class UserController {
     public Page<User> getAll() {
         // Step1：创建一个 Page 对象
 //        Page<User> page = new Page<>();
-         Page<User> page = new Page<>(2, 3);
+        Page<User> page = new Page<>(2, 3);
         // Step2：调用 mybatis-plus 提供的分页查询方法
         userDao.selectPage(page, null);
         // Step3：获取分页数据
@@ -46,6 +53,7 @@ public class UserController {
 //        queryWrapper.lambda().gt(User::getAge, 20);
 //        queryWrapper.lambda().lt(User::getAge, 25);
         User user = userDao.selectOne(queryWrapper);
+        user.setAge(1).setEmail("1").setId(112L).setName("ad");
         return user;
     }
 

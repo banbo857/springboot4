@@ -14,10 +14,6 @@ import java.util.Date;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
 
-/**
- * @author wxl
- * @date 2021-08-15 18:44
- */
 @Component
 public class CacheService {
     @Autowired

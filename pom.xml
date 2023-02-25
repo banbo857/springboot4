@@ -17,12 +17,25 @@
 
 
     <dependencies>
-        <!--代码生成器-->
+<!--        druid-->
         <dependency>
-            <groupId>com.baomidou</groupId>
-            <artifactId>mybatis-plus-generator</artifactId>
-            <version>3.0.5</version>
+            <groupId>com.alibaba</groupId>
+            <artifactId>druid</artifactId>
+            <version>1.1.22</version>
         </dependency>
+<!--        sharding-sphere-->
+        <dependency>
+            <groupId>org.apache.shardingsphere</groupId>
+            <artifactId>sharding-jdbc-spring-boot-starter</artifactId>
+            <version>4.1.1</version>
+        </dependency>
+<!--        &lt;!&ndash;        mybatis-plus-->
+<!--        &lt;!&ndash;代码生成器&ndash;&gt;-->
+<!--        <dependency>-->
+<!--            <groupId>com.baomidou</groupId>-->
+<!--            <artifactId>mybatis-plus-generator</artifactId>-->
+<!--            <version>3.0.5</version>-->
+<!--        </dependency>-->
         <!--模板引擎依赖-->
         <dependency>
             <groupId>org.apache.velocity</groupId>
