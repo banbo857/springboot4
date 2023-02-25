@@ -1,7 +1,7 @@
-package com.dao;
+package com.sharding;
 
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
-import com.pojo.ShardingRes;
+import com.sharding.ShardingRes;
 import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Param;
 

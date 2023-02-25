@@ -29,8 +29,8 @@ spring:
 #                        algorithm-expression: test_$->{update_time.substring(0,4)}$->{update_time.substring(5,7)} #分表算法
                     standard: #标准分表策略
                         sharding-column: update_time #分表字段
-                        precise-algorithm-class-name: com.config.PreciseShardingAlgorithmImpl #精准分表算法
-                        range-algorithm-class-name: com.config.RangeShardingAlgorithmImpl #范围分表算法
+                        precise-algorithm-class-name: com.sharding.PreciseShardingAlgorithmImpl #精准分表算法
+                        range-algorithm-class-name: com.sharding.RangeShardingAlgorithmImpl #范围分表算法
 #                        allow-range-query-with-inline-sharding: true #允许范围查询
 
                 key-generator: #主键生成策略

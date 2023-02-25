@@ -1,4 +1,4 @@
-package com.controller;
+package com.rabbit;
 
 /**
  * RabbitMq test
